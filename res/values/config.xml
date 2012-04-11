@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="serverUrl">http://192.168.1.123:8080/web/update.xml</string>
+    
+    
+    <string name="addressDbUrl">http://192.168.1.123:8080/web/address.db</string>
+    <string name="addressDbUrl_local">/sdcard/address.db</string>
+    
+    <string name="naddressDbUrl">http://192.168.0.100:8080/web/naddress.db</string>
+    <string name="naddressDbUrl_local">/sdcard/naddress.db</string>
+    
+    <string name="phoneNumAddressDbUrl">http://192.168.0.100:8080/web/phoneNumAddress.db</string>
+    <string name="phoneNumAddressDbUrl_local">/sdcard/phoneNumAddress.db</string>
+</resources>

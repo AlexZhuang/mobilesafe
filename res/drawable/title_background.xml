@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <!-- 边框颜色 -->
+    <stroke android:width="0.5dip" android:color="#ff505050" />
+    
+	<!-- Creates rounded corners for the shape. Applies only when the shape is a rectangle. -->
+    <corners android:radius="2dip" />
+
+    <!-- 渐变色 -->
+    <gradient
+        android:centerColor="#ff383030"
+        android:endColor="#ff282828"
+        android:startColor="#ff505050" />
+
+</shape>

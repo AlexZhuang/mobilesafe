@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="280dip"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_login_page"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="#ffc8c8c8"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_input_pwd"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_normalEntryDialog_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dip" >
+
+        <Button
+            android:id="@+id/btn_normalEntryDialog_confirm"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_confirm" />
+
+        <Button
+            android:id="@+id/btn_normalEntryDialog_cancel"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel" 
+            android:layout_marginLeft="50dip"/>
+    </LinearLayout>
+
+</LinearLayout>

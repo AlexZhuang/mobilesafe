@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alex.mobilesafe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.alex.mobilesafe" >
+    </instrumentation>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+
+    <application
+        android:name="MyApplication"
+        android:icon="@drawable/icon5"
+        android:label="@string/app_name" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.LostProtectedActivity"
+            android:label="@string/lost_protect" />
+        <activity
+            android:name=".ui.SetupGuide1Activity"
+            android:label="@string/setupguide1" />
+        <activity
+            android:name=".ui.SetupGuide2Activity"
+            android:label="@string/setupguide2" />
+        <activity
+            android:name=".ui.SetupGuide3Activity"
+            android:label="@string/setupguide3" />
+        <activity
+            android:name=".ui.SetupGuide4Activity"
+            android:label="@string/setupguide4" />
+        <activity android:name=".ui.SelectContactActivity" >
+        </activity>
+        <activity
+            android:name=".ui.AtoolsActivity"
+            android:label="@string/atools" >
+        </activity>
+        <activity
+            android:name=".ui.QueryNumberActivity"
+            android:label="@string/numberQuery" >
+        </activity>
+        <activity android:name=".ui.DragViewActivity" >
+        </activity>
+        <activity android:name=".ui.CallSmsActivity" >
+        </activity>
+        <activity
+            android:name=".ui.AppManagerActivity"
+            android:label="@string/app_manage" />
+        <activity
+            android:name=".ui.AppLockActivity"
+            android:label="@string/app_lock" />
+        <activity
+            android:name=".ui.LockScreenActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ui.SettingCenterActivity"
+            android:label="@string/setting_center" />
+        <activity android:name=".ui.TaskManagerActivity" />
+        <activity android:name=".ui.AppDetailActivity" />
+        <activity android:name=".ui.TaskSettingActivity" />
+        <activity android:name=".ui.CommonNumActivity" />
+        <activity android:name=".ui.TrafficManagerActivity" />
+        
+        
+         <activity android:name="net.youmi.android.AdActivity"
+				  android:configChanges="keyboard|keyboardHidden|orientation"/>
+
+        <receiver android:name=".receiver.BootCompleteReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.CallPhoneReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.SMSReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.MyAdmin" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/my_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.LockScreenReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.ProcessWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/example_appwidget_info" />
+        </receiver>
+
+        <service android:name=".service.AddressService" />
+        <service android:name=".service.SmsBackupService" >
+        </service>
+        <service android:name=".service.WatchDogService" >
+        </service>
+        <service android:name=".service.UpdateWidgetService" >
+        </service>
+
+        <provider
+            android:name=".provider.AppLockProvider"
+            android:authorities="com.alex.applockprovider" />
+    </application>
+
+</manifest>

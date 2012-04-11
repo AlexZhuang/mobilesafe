@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MobilesafeActivity!</string>
+    <string name="app_name">Mobilesafe</string>
+    <string name="lost_protect">手机防盗</string>
+    <string name="tv_set_pwd">设置密码</string>
+    <string name="tv_lostprotect_set_pwd">设置手机防盗密码</string>
+    <string name="tv_reinput_pwd">请再次输入密码</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_cancel">取消</string>
+	<string name="tv_login_page">登录页面</string>
+	<string name="tv_input_pwd">请输入密码</string>
+	<string name="setupguide1">设置向导1/4</string>
+	<string name="setupguide2">设置向导2/4</string>
+	<string name="setupguide3">设置向导3/4</string>
+	<string name="setupguide4">设置向导4/4</string>
+	<string name="bind">绑定</string>
+	<string name="previous_step">上一步</string>
+	<string name="next_step">下一步</string>
+	<string name="select_contact">选择联系人</string>
+	<string name="atools">高级工具</string>
+	<string name="location_query">手机归属地查询</string>
+	<string name="numberQuery">号码归属地查询</string>
+	<string name="location_show_style">归属地提示显示风格</string>
+	<string name="location_show_position">归属地提示显示位置</string>
+	<string name="sms_backup">短信备份</string>
+	<string name="sms_reStore">短信还原</string>
+	<string name="app_manage">软件管理</string>
+	<string name="app_lock">应用程序锁</string>
+	<string name="setting_center">设置中心</string>
+</resources>
